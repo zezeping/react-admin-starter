@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from '@/assets/images/logo.svg';
 import './App.scss';
 import { Button } from 'antd'
 
@@ -18,9 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <Button type="primary">antd button</Button>
       </header>
-      <hr/>
-      <Button type="primary">antd button</Button>
     </div>
   );
 }

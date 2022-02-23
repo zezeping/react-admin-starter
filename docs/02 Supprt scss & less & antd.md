@@ -14,6 +14,11 @@ module.exports = {
   }
 }
 ```
+> 解决 react test 无法找到 @/
+```js
+// 在package.json找到jest.moduleNameMapper添加
+"^@\/(.*)$": "<rootDir>/src/$1" 
+```
 
 * 配置scss加载全局变量
 > function getStyleLoaders
