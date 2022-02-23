@@ -128,3 +128,12 @@ if (preProcessor) {
       );
     }
 ```
+
+### antd
+
+```bash
+npm i antd -S
+
+// src/index.less
+@import '~antd/dist/antd.less'
+```

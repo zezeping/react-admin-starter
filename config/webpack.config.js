@@ -179,7 +179,7 @@ module.exports = function (webpackEnv) {
           lessOptions: {
             javascriptEnabled: true,
             modifyVars: {
-              '@primary-color': '#f00',
+              '@primary-color': '#1990EB',
             },
           }
         }
