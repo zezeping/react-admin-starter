@@ -167,6 +167,12 @@ module.exports = function (webpackEnv) {
       },
     ].filter(Boolean);
     if (preProcessor) {
+      let preProcessorOptions = null
+      if (preProcessor === 'sass-loader') {
+        preProcessorOptions = {
+          additionalData: '@import "@/assets/stylesheets/globalInjectedData.scss";'
+        }
+      }
       loaders.push(
         {
           loader: require.resolve('resolve-url-loader'),
@@ -179,6 +185,7 @@ module.exports = function (webpackEnv) {
           loader: require.resolve(preProcessor),
           options: {
             sourceMap: true,
+            ...preProcessorOptions
           },
         }
       );
@@ -317,6 +324,7 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+        '@': path.join(__dirname, '../src')
       },
       plugins: [
         // Prevents users from importing files from outside of src/ (or node_modules/).
