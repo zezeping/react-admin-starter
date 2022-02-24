@@ -2,6 +2,9 @@ import logo from '@/assets/images/logo.svg';
 import './App.scss';
 import { Button } from 'antd'
 
+import { getUsers } from '@/api/users'
+getUsers()
+
 function App() {
   return (
     <div className="App">
