@@ -25,10 +25,10 @@ export default defineRoutes([
 
 export function defineRoutes(routes) {
   const iterateUseRoute = (route) => {
-    if (route.children) {
-      route.children = route.children.map(route => iterateUseRoute(route))
-    }
-    route.component = route.component
+    //if (route.children) {
+    //  route.children = route.children.map(route => iterateUseRoute(route))
+    //}
+    //route.component = route.component
     return route
   }
   return routes.map(route => iterateUseRoute(route))

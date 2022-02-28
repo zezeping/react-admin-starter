@@ -3,7 +3,7 @@ const initData = {
   userInfo: null
 }
 
-export default (state = {...initData}, action) => {
+const reducer = (state = {...initData}, action) => {
   switch (action.type) {
     case 'SET_USER_AUTH_INFO':
       return {
@@ -21,3 +21,5 @@ export default (state = {...initData}, action) => {
       return state
   }
 }
+
+export default reducer

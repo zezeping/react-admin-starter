@@ -1,8 +1,9 @@
-import { createStore, combineReducers } from 'redux'
-import * as reducers from './reducers'
+import { createStore } from 'redux'
+import { persistStore } from 'redux-persist'
+import rootReducer from './reducers'
 
-const rootReducer = combineReducers({
-  ...reducers
-})
+const store = createStore(rootReducer)
+const persistor = persistStore(store)
 
-export default createStore(rootReducer)
+export { persistor }
+export default store

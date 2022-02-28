@@ -3,9 +3,9 @@ import { Button } from 'antd'
 import { connect } from 'react-redux'
 
 export default connect(state => state)(class extends Component {
-  constructor () {
-    super(...arguments)
-  }
+  //constructor () {
+  //  super(...arguments)
+  //}
   
   onLogin = () => {
     this.props.dispatch({
